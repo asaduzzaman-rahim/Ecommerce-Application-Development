@@ -15,18 +15,15 @@
 
 .slick-dots {
     bottom: 20px !important; 
-    left: 120px  !important;
+    left: 90px  !important;
     width: 70%  !important;
 }
 .slick-dots li {
-    margin: 0 6px;
     background-color: #808080;
-    height: 12px !important;
-    width: 12px !important;
     border-radius: 100% !important;
-}
-
-li.slick-active{
+  }
+  
+  li.slick-active{
   background-color: #DB4444 !important;
   border: 4px solid #DB4444 !important;
 }

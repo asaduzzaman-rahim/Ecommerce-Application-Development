@@ -6,8 +6,6 @@ import Header from '../Component/Header'
 const Home = () => {
   return (
     <>
-      <Header/>
-      <Navber/>
       <Benar/>
     </>
   )

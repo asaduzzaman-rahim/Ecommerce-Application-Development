@@ -36,8 +36,7 @@ const Footer = () => {
     </div>
     <hr className="my-6 border-default sm:mx-auto lg:my-8" />
     <span className="block text-sm text-body sm:text-center">
-      © 2023{'{'}" "{'}'}
-      . All Rights Reserved.
+      © 2023 . All Rights Reserved.
     </span>
   </div>
 </footer>

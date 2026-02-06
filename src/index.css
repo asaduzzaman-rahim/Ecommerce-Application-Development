@@ -12,6 +12,16 @@
   --breakpoint-xl: 1170px;
 }
 
+h2{
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: 6%;
+}
+p{
+  font-size: 16px;
+  line-height: 26px;
+}
 
 .slick-dots {
     bottom: 20px !important; 

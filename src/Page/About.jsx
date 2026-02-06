@@ -1,10 +1,15 @@
 import React from 'react'
+import OurStory from '../Component/OurStory'
+import AboutCart from '../Component/AboutCart'
+import ServiceAria from '../Component/ServiceAria'
 
 const About = () => {
   return (
-    <div>
-        <h1 className='text-3xl text-center py-4 bg-[#dddd}'>Welcome To About Page</h1>
-    </div>
+    <>
+     <OurStory/>   
+     <AboutCart/>
+     <ServiceAria/>
+    </>
   )
 }
 

@@ -12,6 +12,7 @@ import Home from "./Page/Home.jsx";
 import About from "./Page/About.jsx";
 import Contact from "./Page/Contact.jsx";
 import SignUp from "./Page/SignUp.jsx";
+import Shop from "./Page/Shop.jsx";
 
 // *! React Redux
 // import { Provider } from 'react-redux'
@@ -29,6 +30,10 @@ let router = createBrowserRouter([
       {
         index: true,
         Component: Home,
+      },
+      {
+        path: "shop",
+        Component: Shop,
       },
       {
         path: "about",

@@ -14,27 +14,32 @@ const PersonSection = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
     slidesToShow: 3,
     autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
     slidesToScroll: 1, // 🔥 important
+    initialSlide: 0,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1170,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 990,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
+          initialSlide: 2,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 786,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -44,45 +49,43 @@ const PersonSection = () => {
   };
 
   return (
-    <div className="pt-[140px]">
+    <div className="pt-[140px] mx-auto ">
       <Container>
         <Slider {...settings}>
-          
-            <PersonCart
-              PersonImg={Person1}
-              PersonName="Tom Cruise"
-              PersonTittle="Founder & Chairman"
-            />
-          
-            <PersonCart
-              PersonImg={Person2}
-              PersonName="Emma Watson"
-              PersonTittle="Managing Director"
-            />
-      
-            <PersonCart
-              PersonImg={Person3}
-              PersonName="Will Smith"
-              PersonTittle="Product Designer"
-            />
-            <PersonCart
-              PersonImg={Person1}
-              PersonName="Tom Cruise"
-              PersonTittle="Founder & Chairman"
-            />
-          
-            <PersonCart
-              PersonImg={Person2}
-              PersonName="Emma Watson"
-              PersonTittle="Managing Director"
-            />
-      
-            <PersonCart
-              PersonImg={Person3}
-              PersonName="Will Smith"
-              PersonTittle="Product Designer"
-            />
-         
+          <PersonCart
+            PersonImg={Person1}
+            PersonName="Tom Cruise"
+            PersonTittle="Founder & Chairman"
+          />
+
+          <PersonCart
+            PersonImg={Person2}
+            PersonName="Emma Watson"
+            PersonTittle="Managing Director"
+          />
+
+          <PersonCart
+            PersonImg={Person3}
+            PersonName="Will Smith"
+            PersonTittle="Product Designer"
+          />
+          <PersonCart
+            PersonImg={Person1}
+            PersonName="Tom Cruise"
+            PersonTittle="Founder & Chairman"
+          />
+
+          <PersonCart
+            PersonImg={Person2}
+            PersonName="Emma Watson"
+            PersonTittle="Managing Director"
+          />
+
+          <PersonCart
+            PersonImg={Person3}
+            PersonName="Will Smith"
+            PersonTittle="Product Designer"
+          />
         </Slider>
       </Container>
     </div>

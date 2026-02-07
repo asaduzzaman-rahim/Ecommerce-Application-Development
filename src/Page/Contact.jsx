@@ -12,7 +12,7 @@ const Contact = () => {
     <>
       <div className="pt-[80px] pb-[140px]">
         <Container>
-          <Grid className=" grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+          <Grid className=" grid grid-cols-1 lg:grid-cols-2 lg:justify-items-start gap-[30px]">
             <div className="lg:w-[270px] px-[30px] py-[45px] gap-[40px] grid grid-cols-2 lg:grid-cols-1">
               <div className="pb-[32px] lg:border-b-1 ">
                 <div className="flex items-center gap-[16px] ">

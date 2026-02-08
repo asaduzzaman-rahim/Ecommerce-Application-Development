@@ -17,7 +17,7 @@ const SignUp = () => {
     <>
       <div className='mt-[60px] mb-[140px]  max-w-[1305px]'>
         <div>
-          <Flex className="gap-[129px] justify-center lg:justify-between relative">
+          <Flex className="gap-[129px] justify-center lg:!items-start lg:justify-between relative">
             <div className='hidden lg:block'>
                 <img src={SignUpIMG} alt="SignUp Img" />
             </div>

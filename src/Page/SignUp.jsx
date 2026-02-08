@@ -21,8 +21,10 @@ const SignUp = () => {
                 <input type="text" placeholder='Name' className='w-[370px] h-[32px] border-b-1 mb-[40px]'/> <br />
                 <input type="text" placeholder='Email or Phone Number' className='w-[370px] h-[32px] border-b-1 mb-[40px]'/> <br />
                 <input type="password" placeholder='Password' className='w-[370px] h-[32px] border-b-1 mb-[40px]'/> <br />
-                <Button>Create Account</Button>
-                <Button className="!bg-white !text-black border-2 border-gray-500 mt-[16px] mb-[32px]">Sign up with Google</Button>
+                <div className='flex flex-col gap-[16px]  my-[32px]'>
+                  <Button className=" !inline">Create Account</Button> 
+                  <Button className="!bg-white !inline !text-black border-2 border-gray-500">Sign up with Google</Button>
+                </div>
                 <p className='text-[16px] text-center'>Already have account? <Link to={"/SignIn"} className='!border-b-2  border-gray-500' >Log in</Link> </p>
               </form>
             </div>

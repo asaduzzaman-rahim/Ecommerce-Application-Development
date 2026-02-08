@@ -28,7 +28,7 @@ const Navber = () => {
                 <nav className=' pt-[40px] pb-[16px]'>
                     <Flex className="justify-between items-center relative ">
                         <div className='cursor-pointer pl-3'>
-                            <img src={Logo} alt="logo" />
+                            <Link to={"/"}><img src={Logo} alt="logo" /> </Link>
                         </div>
                         <div className={` lg:flex  z-10 lg:flex-row justify-between flex-col gap-4 p-4 lg:p-0 lg:w-[75%] lg:static absolute top-12 left-0 lg:bg-white lg:text-black  bg-blue-500 text-white w-full   
                         ${!navber ? "hidden" : "block"}`}>

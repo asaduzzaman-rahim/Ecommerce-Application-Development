@@ -15,6 +15,7 @@ import SignUp from "./Page/SignUp.jsx";
 import Shop from "./Page/Shop.jsx";
 import SignIn from "./Page/SignIn.jsx"
 import ErrorPage from "./Page/ErrorPage.jsx"
+import CartSection from "./Page/CartSection.jsx";
 
 // *! React Redux
 // import { Provider } from 'react-redux'
@@ -52,6 +53,10 @@ let router = createBrowserRouter([
       {
         path: "signin",
         Component: SignIn,
+      },
+      {
+        path: "cart",
+        Component: CartSection,
       },
       {
         path: "*",

@@ -3,6 +3,7 @@ import Flex from "../Component/Flex"
 import Button from "../Component/Button"
 import Container from "../Component/Container"
 import SignUpIMG from "../assets/SignUpImg.png"
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
@@ -22,7 +23,7 @@ const SignUp = () => {
                 <input type="password" placeholder='Password' className='w-[370px] h-[32px] border-b-1 mb-[40px]'/> <br />
                 <Button>Create Account</Button>
                 <Button className="!bg-white !text-black border-2 border-gray-500 mt-[16px] mb-[32px]">Sign up with Google</Button>
-                <p className='text-[16px] text-center'>Already have account? <a className='!border-b-2  border-gray-500' href='#'>Log in</a> </p>
+                <p className='text-[16px] text-center'>Already have account? <Link to={"/SignIn"} className='!border-b-2  border-gray-500' >Log in</Link> </p>
               </form>
             </div>
           </Flex>

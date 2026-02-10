@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "../Component/Container";
 import Grid from "../Component/Grid";
-import CategorySection from "../Component/CategorySection";
+
+import { BiSolidCategory } from "react-icons/bi";
+
 
 const Shop = () => {
+
+  const [show, setShow] = useState(false)
+
+  const handleClick = ()=>{
+    setShow(!show)
+  }
+
+
   return (
     <>
     <div className="py-[30px] md:py-[50px] lg:py-[80px]">
@@ -15,9 +25,12 @@ const Shop = () => {
           <div className="lg:w-[30%] w-full">
             <span>Home / Shop</span>
             <div className=" py-[25px] md:py-[35px] lg:py-[50px]">
-              <h3 className="text-[20px] font-bold text-[#262626]">Shop by Category</h3>
-                <div className="   w-full  pl-2  lg:static  ">
-                  <ul className=" w-full text-[16px] py-5  text-xs lg:text-base lg:space-y-2 grid grid-cols-3  lg:grid-cols-1 gap-x-6 gap-y-1">
+              <div className="flex justify-between items-center ">
+                <h3 className="text-[20px] font-bold text-[#262626]">Shop by Category</h3>
+                <button onClick={handleClick} className="text-[30px] font-bold text-[#262626] cursor-pointer md:hidden"><BiSolidCategory /></button>
+              </div>
+              <div className={` ${show ? "block" : "hidden"} md:block`}>               
+                  <ul className={` w-full  text-[16px] lg:py-5 py-2  text-xs lg:text-base lg:space-y-2 grid grid-cols-3 md:grid-cols-3 lg:grid-cols-1 gap-x-6 gap-y-1`}>
                     <li>Woman’s Fashion</li>
                     <li>Men’s Fashion </li>
                     <li>Electronics</li>
@@ -28,7 +41,7 @@ const Shop = () => {
                     <li>Groceries & Pets</li>
                     <li>Health & Beauty</li>
                   </ul>
-                </div>
+              </div>
             </div>
           </div>
 

@@ -8,6 +8,10 @@ import { Link } from "react-router-dom";
 import { RiShoppingCart2Line } from "react-icons/ri";
 import { RiSearchLine } from "react-icons/ri";
 import { IoIosHeartEmpty } from "react-icons/io";
+import { IoMenu } from "react-icons/io5";
+import { FaRegWindowClose } from "react-icons/fa";
+
+
 
 import Logo from "../assets/Logo.png"
 
@@ -51,7 +55,7 @@ const Navber = () => {
                         </div>
                         
                         <button onClick={handleNavber}
-                        className='block lg:hidden font-bold text-4xl pr-3 cursor-pointer'>{!navber ? "=" : "x"}</button>
+                        className='block lg:hidden font-bold text-4xl pr-3 cursor-pointer'>{!navber?<IoMenu />:<FaRegWindowClose />}</button>
                     </Flex>
                 </nav>
             </Container>

@@ -13,7 +13,7 @@ const CartSection = () => {
     <>
       <div className='pb-[140px] '>
         <Container>
-            <div className='py-[80px] '>
+            <div className='py-[30px] md:py-[50px] lg:py-[80px] '>
                 <span>Home / Cart</span>
             </div>
             <div>

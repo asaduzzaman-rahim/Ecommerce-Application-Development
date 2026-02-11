@@ -34,7 +34,7 @@ const Benar = () => {
   
   return (
     <>
-      <Container className="!px-0">
+      <Container className="!px-0 pb-5 md:pb-0">
         <div className="h-[300px] sm:h-[450px] lg:h-[455px]">
           <Flex className="lg:justify-between relative">
             {/* ! Category Section Start now */}

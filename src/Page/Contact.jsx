@@ -49,7 +49,7 @@ const Contact = () => {
                     <input type="number" placeholder="Your Phone" className="bg-[#f5f5f5] h-[50px] w-full lg:w-[235px] pl-3"  required/>
                 </div>
                 <div className="py-[32px]">
-                  <input type="text" placeholder="Your Massage" className="bg-[#f5f5f5] h-[207px] w-full lg:w-[737px] pl-3 py-[32px] "/>
+                  <input type="text" placeholder="Your Massage" className="bg-[#f5f5f5] pb-[207px] w-full lg:w-[737px] pl-3 py-[10px] "/>
                 </div>
                 <Button className="inline-block px-[48px] ">Send Massage</Button>
               </form>

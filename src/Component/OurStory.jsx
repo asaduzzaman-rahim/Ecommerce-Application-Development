@@ -7,7 +7,7 @@ import StoryImg from "../assets/OurStoryImg.png"
 const OurStory = () => {
   return (
     <>
-    <div className='py-[170px] '>
+    <div className='py-[50px] lg:py-[170px] '>
         <Container> 
             <Flex className=" flex-wrap  justify-between md:justify-center lg:justify-between  gap-[75px] relative">
                 <div>

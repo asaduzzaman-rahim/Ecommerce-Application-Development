@@ -48,6 +48,7 @@ const MyAccount = () => {
             <div className="w-full lg:!w-[70%]  lg:py-[40px] lg:px-[80px] ">
                 <h4 className="text-[20px] text-[#DB4444] font-medium ">Edit Your Profile</h4>
             
+            <form action="#">
                 <div className="flex justify-between lg:gap-x-[50px] items-center  pt-[16px]">
                     <div>
                         <label htmlFor="email">Frist Name</label> <br />
@@ -78,6 +79,7 @@ const MyAccount = () => {
                     <p><a href="#">Cancel</a></p>
                     <Button>SaveChanges</Button>
                 </div>
+            </form>
 
             </div>
           </Flex>

@@ -1,15 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import "tailwindcss";
+
 
 @utility container {
   margin-inline: auto;
 }
 
 @theme {
+  /* ------ Container part ---------- */
   --breakpoint-*: initial;
   --breakpoint-sm: 570px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 990px;
   --breakpoint-xl: 1170px;
+/* ------Color Theme ------- */
+  --color-primary: #DB4444;
+  --color-hide: #808080;
+
+  /* ------------ text font theme ----------- */
+  --font-poppins: "Poppins", sans-serif;
+  
 }
 
 h2{

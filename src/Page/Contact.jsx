@@ -12,8 +12,9 @@ const Contact = () => {
     <>
       <div className="pt-[80px] pb-[140px]">
         <Container>
-          <Grid className=" grid grid-cols-1 lg:grid-cols-2 lg:justify-items-start gap-[30px]">
-            <div className="lg:w-[270px] px-[30px] py-[45px] gap-[40px] grid grid-cols-2 lg:grid-cols-1">
+         <Flex className="flex-wrap justify-between items-center">
+          {/* <Grid className=" grid grid-cols-1 lg:grid-cols-2 lg:justify-items-start gap-[30px]"> */}
+            <div className="lg:w-[270px] px-[30px]  gap-[40px] grid grid-cols-2 lg:grid-cols-1">
               <div className="pb-[32px] lg:border-b-1 ">
                 <div className="flex items-center gap-[16px] ">
                   <IoCallOutline className="p-[10px] bg-[#DB4444] text-white text-[40px] rounded-full" />
@@ -41,21 +42,23 @@ const Contact = () => {
             </div>
 
             {/* // form Section  */}
-            <div>
+            
+            <div className="w-full lg:w-[70%]">
               <form action="#">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-[16px] justify-between">
+                <div className="flex lg:justify-between items-center gap-[16px] flex-wrap">
                    <input type="text" placeholder="Your Name" className="bg-[#f5f5f5] h-[50px] w-full lg:w-[235px] pl-3"  required/>
                     <input type="email" placeholder="Your Email" className="bg-[#f5f5f5] h-[50px] w-full lg:w-[235px] pl-3" required/>
                     <input type="number" placeholder="Your Phone" className="bg-[#f5f5f5] h-[50px] w-full lg:w-[235px] pl-3"  required/>
                 </div>
                 <div className="py-[32px]">
-                  <input type="text" placeholder="Your Massage" className="bg-[#f5f5f5] pb-[207px] w-full lg:w-[737px] pl-3 py-[10px] "/>
+                  <input type="text" placeholder="Your Massage" className="bg-[#f5f5f5] pb-[207px] w-full pl-3 py-[10px] "/>
                 </div>
                 <Button className="inline-block px-[48px] ">Send Massage</Button>
               </form>
 
             </div>
-          </Grid>
+            </Flex>
+          {/* </Grid> */}
         </Container>
       </div>
     </>

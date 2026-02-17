@@ -26,7 +26,7 @@ const Navber = () => {
 
   return (
     <>
-        <div className='border-b-1 border-[#808080]'>
+        <div className='border-b-1 border-[#808080] '>
             
             <Container className="!p-0">
                 <nav className=' pt-[40px] pb-[16px]'>

@@ -35,7 +35,7 @@ const CartSection = () => {
                     </tr>
                   </thead>
                   <tr className='py-[20px]'>
-                    <td className="px-6 py-2  text-[14px] font-medium w-[50%]">
+                    <td className="px-2 py-2  text-[14px] font-medium w-[50%]">
                       <div className='flex items-center gap-[20px]'> 
                         <img src={Cart1} alt="cart photo" /> <p>LCD Monitor</p>
                       </div>
@@ -52,7 +52,7 @@ const CartSection = () => {
                   </tr>
 
                   <tr className='py-[20px]'>
-                    <td className="px-6 py-2  text-[14px] font-medium w-[50%]">
+                    <td className="px-2 py-2  text-[14px] font-medium w-[50%]">
                       <div className='flex items-center gap-[20px]'> 
                         <img src={Cart2} alt="cart photo" /> <p>H1 Gamepad</p>
                       </div>
@@ -113,7 +113,7 @@ const CartSection = () => {
                       </td>
                       </tr>
                     </table>
-                    <Button className="pt-[16px]">Procees to checkout</Button>
+                    <Button className="mt-[16px]"><Link to={"/CheckOut"}>Procees to checkout</Link></Button>
                   </div>
                 </Flex>
             </div>

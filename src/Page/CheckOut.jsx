@@ -14,9 +14,9 @@ const CheckOut = () => {
             <div className='py-[40px] lg:py-[80px]'>
                 <span>CheckOut</span>
             </div>
-            <Grid className="grid-cols-1 lg:grid-cols-2 justify-between !items-start lg:gap-x-[173px]">
+            <Grid className="grid-cols-1 lg:grid-cols-2 justify-between !items-start lg:gap-x-[173px] gap-y-[40px]">
                 <div>
-                    <h2 className='text-[20px] lg:text-[36px] font-medium leading-[30px] '>Billing Details</h2>
+                    <h2 className='text-[25px] lg:text-[36px] font-medium leading-[30px] '>Billing Details</h2>
                     <div className='pt-[48px]'>
                         <form action="#" className="space-y-[32px]">
                             <div>

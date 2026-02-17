@@ -8,10 +8,13 @@ import { Link } from "react-router-dom";
 const SignUp = () => {
   return (
     <>
-      <div className='mt-[60px] mb-[140px] max-w-[1305px]'>
-          <Flex className="gap-[129px] justify-center lg:justify-between relative">
-            <div className='hidden lg:block'>
+      <Container className="lg:!w-full">
+        <div className='mt-[60px] mb-[140px] max-w-[1305px]'>
+          <Flex className="gap-[129px] justify-center lg:!justify-between relative">
+            <div className=' hidden xl:block '>
+              <div  className="absolute top-[-55px] left-[-250px] z-10" >
                 <img src={SignUpIMG} alt="SignUp Img" />
+              </div>
             </div>
 
             <div>
@@ -30,6 +33,7 @@ const SignUp = () => {
             </div>
           </Flex>
       </div>
+      </Container>
     </>
   )
 }

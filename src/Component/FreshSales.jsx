@@ -5,6 +5,9 @@ import Flex from "./Flex";
 import ProductListCart from "./ProductListCart";
 import Button from "./Button";
 
+import productimg from "../assets/ProductImage.jpg"
+
+
 const FreshSales = () => {
   return (
     <>
@@ -14,10 +17,36 @@ const FreshSales = () => {
           <SecHeading tittle="Today's " heading="Flash Sales" />
 
           <Flex className="mt-[40px] mb-[60px] gap-[30px] flex-wrap">
-            <ProductListCart/>
-            <ProductListCart/>
-            <ProductListCart/>
-            <ProductListCart/>
+            <ProductListCart 
+              ProductImage={productimg}
+              Discount="-40%"
+              Heading="HAVIT HV-G92 Gamepad"
+              DiscountPrice="$120"
+              MainPrice="$160"
+            />
+            <ProductListCart 
+              ProductImage={productimg}
+              Discount="-40%"
+              Heading="HAVIT HV-G92 Gamepad"
+              DiscountPrice="$120"
+              MainPrice="$160"
+            />
+            <ProductListCart 
+              ProductImage={productimg}
+              Discount="-40%"
+              Heading="HAVIT HV-G92 Gamepad"
+              DiscountPrice="$120"
+              MainPrice="$160"
+            />
+            <ProductListCart 
+              ProductImage={productimg}
+              Discount="-40%"
+              Heading="HAVIT HV-G92 Gamepad"
+              DiscountPrice="$120"
+              MainPrice="$160"
+            />
+               
+            
           </Flex>
           <div className="text-center">
             <Button className="text-center">View All Products</Button>

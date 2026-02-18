@@ -5,6 +5,7 @@ import Button from '../Component/Button'
 
 import Cart1 from "../assets/Monitor-Cart-Small.png"
 import Cart2 from "../assets/Gamepad-Cart-Small.png"
+import BankImage from "../assets/Bank-Icon.png"
 
 const CheckOut = () => {
   return (
@@ -48,7 +49,7 @@ const CheckOut = () => {
                                 <input type="email"  className="bg-[#f5f5f5] h-[50px] w-full lg:w-[470px] mt-[8px] pl-1"  required/>
                             </div>
                             <div className='flex gap-[16px]'>
-
+                                <input className='!bg-primary' type="checkbox" />
                                 <p>Save this information for faster check-out next time</p>
                             </div>
                         </form>
@@ -101,6 +102,24 @@ const CheckOut = () => {
                             </td>
                         </tr>
                     </table>
+
+                        {/* Payment gatway section start */}
+
+                       
+                            <div className=" py-2  text-[14px] flex justify-between items-center w-full">
+                                <div className='flex items-center gap-[16px]'>
+                                    <input className='h-[20px] w-[20px] bg-primary' type="radio" />
+                                    <p>Bank</p>
+                                </div>
+                                <img src={BankImage} alt="Bank Image" />
+                            </div>
+                            <div className=" py-2  text-[14px] flex items-center gap-[16px]">
+                                <input className='h-[20px] w-[20px] bg-primary' type="radio" />
+                                <p>Cash on dalivary</p>
+                            </div>
+                        
+                        {/* Payment gatway section End */}
+                        
                     <div className='flex gap-x-[16px] py-[32px]'>
                         <input type="text" placeholder='Coupon Code' className='w-[300px] h-[56px] bg-[#f4f4f4]' />
                         <Button>ApplyCoupon</Button>

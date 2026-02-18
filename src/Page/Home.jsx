@@ -6,7 +6,9 @@ import SliderHome from "../Component/SliderHome"
 import ServiceAria from '../Component/ServiceAria'
 import FreshSales from '../Component/FreshSales'
 import Category from '../Component/Category'
-import ProductSection from '../Component/ProductSection'
+import BestSellingProductSection from '../Component/BestSellingProductSection'
+import OurExploreProducts from '../Component/OurExploreProducts'
+import FeaturedArrival from '../Component/FeaturedArrival'
 
 const Home = () => {
   return (
@@ -14,8 +16,10 @@ const Home = () => {
       <Benar/>
       <FreshSales/>
       <Category/>
-      <ProductSection/>
+      <BestSellingProductSection/>
       <SliderHome/>
+      <OurExploreProducts/>
+      <FeaturedArrival/>
       <ServiceAria/>
     </>
   )

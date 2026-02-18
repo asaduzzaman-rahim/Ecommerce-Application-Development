@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 
 
@@ -19,6 +20,7 @@
 
   /* ------------ text font theme ----------- */
   --font-poppins: "Poppins", sans-serif;
+  --font-inter: "Inter", sans-serif;
   
 }
 
@@ -47,4 +49,17 @@ p{
   li.slick-active{
   background-color: #DB4444 !important;
   border: 4px solid #DB4444 !important;
+}
+
+.slick-next {
+    background: red !important;
+    position: absolute !important;
+    top: -46px !important;
+    right: 8px !important;
+}
+.slick-prev  {
+    background: red !important;
+    position: absolute !important;
+    top: -46px !important;
+    left: 1085px !important;
 }

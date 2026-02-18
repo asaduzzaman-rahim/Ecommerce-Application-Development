@@ -12,9 +12,9 @@ import IconSecure from "../assets/Service (3).png";
 const ServiceAria = () => {
   return (
     <>
-      <div className="py-[140px]">
+      <div className=" py-[30px] md:py-[70px] lg:py-[140px]">
         <Container>
-          <Flex className="flex-wrap justify-center gap-[88px] "> 
+          <Flex className="flex-wrap justify-center gap-x-[88px] gap-y-[30px] "> 
             <ServiceCart
               SerImg={IconCustomer}
               ServiceName={"FREE AND FAST DELIVERY"}

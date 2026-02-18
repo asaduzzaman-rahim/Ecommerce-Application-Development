@@ -9,7 +9,7 @@ import ProductListCart from "./ProductListCart";
 import productimg from "../assets/ProductImage.jpg"
 
 
-const ProductSection = () => {
+const BestSellingProductSection = () => {
   return (
     <>
         <section className="mt-[70px] mb-[140px]">
@@ -18,7 +18,7 @@ const ProductSection = () => {
                     <SecHeading tittle="This Month " heading="Best Salling Products" />  
                     <Button>View All</Button>  
                 </Flex> 
-                <Flex className="gap-[30px]">   
+                <Flex className=" flex-wrap justify-center gap-[30px]">   
                     <ProductListCart 
                         ProductImage={productimg}
                         Heading="The north coat"
@@ -58,4 +58,4 @@ const ProductSection = () => {
   )
 }
 
-export default ProductSection
+export default BestSellingProductSection

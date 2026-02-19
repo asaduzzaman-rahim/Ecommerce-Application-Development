@@ -108,13 +108,13 @@ const CheckOut = () => {
                        
                             <div className=" py-2  text-[14px] flex justify-between items-center w-full">
                                 <div className='flex items-center gap-[16px]'>
-                                    <input className='h-[20px] w-[20px] bg-primary' type="radio" />
+                                    <input className='h-[20px] w-[20px] bg-primary' type="radio" name="payment" />
                                     <p>Bank</p>
                                 </div>
                                 <img src={BankImage} alt="Bank Image" />
                             </div>
                             <div className=" py-2  text-[14px] flex items-center gap-[16px]">
-                                <input className='h-[20px] w-[20px] bg-primary' type="radio" />
+                                <input className='h-[20px] w-[20px] bg-primary' type="radio"  name="payment"/>
                                 <p>Cash on dalivary</p>
                             </div>
                         

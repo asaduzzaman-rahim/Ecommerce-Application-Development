@@ -18,6 +18,7 @@ import ErrorPage from "./Page/ErrorPage.jsx"
 import CartSection from "./Page/CartSection.jsx";
 import MyAccount from "./Page/MyAccount.jsx";
 import CheckOut from "./Page/CheckOut.jsx";
+import ProductDetailsPage from "./Page/ProductDetailsPage.jsx";
 
 // *! React Redux
 // import { Provider } from 'react-redux'
@@ -67,6 +68,10 @@ let router = createBrowserRouter([
       {
         path: "CheckOut",
         Component: CheckOut,
+      },
+      {
+        path: "ProductDetails",
+        Component: ProductDetailsPage,
       },
       {
         path: "*",

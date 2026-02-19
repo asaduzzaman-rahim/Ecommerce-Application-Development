@@ -45,12 +45,12 @@ const Navber = () => {
                          
                          <div className='flex items-center gap-[16px] pr-3'>
                                 <div className='flex gap-3 !text-black bg-[#F5F5F5]'>
-                                    <input type="text" placeholder='What are you looking for?'
+                                    <input type="search" placeholder='What are you looking for?'
                                     className='py-[7px] pl-[15px] pr-[10px]'/>
                                     <RiSearchLine className='h-[32px] w-[32px]   cursor-pointer' />
                                 </div>
-                                <IoIosHeartEmpty className='h-[32px] w-[32px] cursor-pointer' />
-                                <RiShoppingCart2Line className='h-[32px] w-[32px] cursor-pointer' />
+                                <Link to={"/wishlist"}> <IoIosHeartEmpty className='h-[32px] w-[32px] cursor-pointer' /></Link>
+                                <Link to={"/cart"}><RiShoppingCart2Line className='h-[32px] w-[32px] cursor-pointer' /></Link> 
                             </div>
                         </div>
                         

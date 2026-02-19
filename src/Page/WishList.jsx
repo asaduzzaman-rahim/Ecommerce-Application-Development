@@ -1,11 +1,61 @@
 import React from 'react'
 import Container from '../Component/Container'
+import Button from "../Component/Button"
+import Flex from "../Component/Flex"
+import WishListProductCart from "../Component/WishListProdtCart"
+import RelatedProductList from '../Component/RelatedProductList'
+import SecHeading from "../Component/SecHeading"
+
+import productimg from "../assets/ProductImage.jpg"
+
 
 const WishList = () => {
   return (
     <>
       <Container>
-        
+        <div className='py-[10px] md:py-[40px] lg:py-[80px]'>
+          <Flex className="justify-between items-center">
+            <span>Wishlist (4)</span>
+            <Button className="!bg-white !text-black border-1 border-hide">Move All To Bag</Button>
+          </Flex>
+          <Flex className="gap-[30px] items-center flex-wrap mt-[40px]">
+              <WishListProductCart
+                ProductImage={productimg}
+                Discount="-40%"
+                Heading="Breed Dry Dog Food "
+                DiscountPrice="$100"
+                MainPrice="$140"
+              />
+              <WishListProductCart
+                ProductImage={productimg}
+                Discount="-40%"
+                Heading="Breed Dry Dog Food "
+                DiscountPrice="$100"
+                MainPrice="$140"
+              />
+              <WishListProductCart
+                ProductImage={productimg}
+                Discount="-40%"
+                Heading="Breed Dry Dog Food "
+                DiscountPrice="$100"
+                MainPrice="$140"
+              />
+              <WishListProductCart
+                ProductImage={productimg}
+                Discount="-40%"
+                Heading="Breed Dry Dog Food "
+                DiscountPrice="$100"
+                MainPrice="$140"
+              />
+          </Flex>
+          <div className='mt-[80px]'>
+            <Flex className=' items-center justify-between pb-[60px]'>
+              <SecHeading tittle="Just For You"/>  
+              <Button  className="!bg-white !text-black border-1 border-hide">See All</Button>            
+            </Flex>
+            <RelatedProductList/>
+          </div>
+        </div>
       </Container>
     </>
   )

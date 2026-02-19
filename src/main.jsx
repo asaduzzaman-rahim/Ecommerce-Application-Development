@@ -14,6 +14,7 @@ import Contact from "./Page/Contact.jsx";
 import SignUp from "./Page/SignUp.jsx";
 import Shop from "./Page/Shop.jsx";
 import SignIn from "./Page/SignIn.jsx"
+import WishList from "./Page/WishList.jsx"
 import ErrorPage from "./Page/ErrorPage.jsx"
 import CartSection from "./Page/CartSection.jsx";
 import MyAccount from "./Page/MyAccount.jsx";
@@ -60,6 +61,10 @@ let router = createBrowserRouter([
       {
         path: "cart",
         Component: CartSection,
+      },
+      {
+        path: "wishlist",
+        Component: WishList,
       },
       {
         path: "myaccount",

@@ -16,6 +16,7 @@ import ProductImg04 from "../assets/Product Details Img (4).png";
 import ProductImg05 from "../assets/Product Details Img (5).png";
 import Delivary from "../assets/icon-delivery.png"
 import Return from "../assets/Icon-return.png"
+import RelatedProductList from "../Component/RelatedProductList";
 
 const ProductDetailsPage = () => {
 
@@ -35,14 +36,14 @@ const ProductDetailsPage = () => {
               Havic HV G-92 Gamepad
             </span>
           </div>
-          <Flex className=" flex-wrap gap-[70px] !items-start">
+          <Flex className=" flex-wrap gap-[70px] !items-start justify-center">
             <div>
-              <Flex className="gap-[30px]">
-                <Flex className="flex-col gap-[16px]">
-                  <img src={ProductImg02} alt="Product Img" />
-                  <img src={ProductImg03} alt="Product Img" />
-                  <img src={ProductImg04} alt="Product Img" />
-                  <img src={ProductImg05} alt="Product Img" />
+              <Flex className="gap-[30px] flex-wrap">
+                <Flex className="md:flex-col  gap-[16px]">
+                  <img className="w-[22%] md:w-full" src={ProductImg02} alt="Product Img" />
+                  <img className="w-[22%] md:w-full" src={ProductImg03} alt="Product Img" />
+                  <img className="w-[22%] md:w-full" src={ProductImg04} alt="Product Img" />
+                  <img className="w-[22%] md:w-full" src={ProductImg05} alt="Product Img" />
                 </Flex>
                 <img src={ProductImg01} alt="Product Img" />
               </Flex>
@@ -50,7 +51,7 @@ const ProductDetailsPage = () => {
 
             {/* Products Content Details Part Start  */}
 
-            <div className="w-[393px]">
+            <div className="lg:w-[393px] ">
               <h1 className="text-[24px] font-inter font-semibold leading-[24px]">Havic HV G-92 Gamepad</h1>
               <Flex className="gap-[8px] py-[16px] ">
                 <Flex>
@@ -93,7 +94,7 @@ const ProductDetailsPage = () => {
                     </div>
                 </div>
 
-                <div className="flex justify-between items-center h-[44px]">
+                <div className="flex gap-[25px] items-center h-[44px]">
                   <div className="flex items-center border-1 border-hide rounded-md">
                     <button onClick={()=>setProductNumber(productNumber-1)}
                     className="px-[8px] py-[6px] text-[26px] font-poppins font-medium leading-[28px] border-r-1 border-hide cursor-pointer">-</button>
@@ -129,7 +130,7 @@ const ProductDetailsPage = () => {
             <div className="my-[40px] md:my-[80px] lg:my-[140px]">
                 <SecHeading tittle="Related Item"/>
                 <div className="mt-[60px]">
-
+                      <RelatedProductList/>
                 </div>
             </div>
             {/* Related Item End */}

@@ -11,6 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 import productimg from "../assets/ProductImage.jpg"
+import CountDownDateDay from "./CountDownDateDay";
 
 
 const FreshSales = () => {
@@ -78,7 +79,10 @@ const FreshSales = () => {
       <section className="my-[30px] lg:mt-[120px] lg:mb-[70px] !md:mt-[50px] md:mb-[40px] ">
         <Container>
         <div>
-          <SecHeading tittle="Today's " heading="Flash Sales" />
+          <Flex className="items-end md:gap-[150px]">
+            <SecHeading tittle="Today's " heading="Flash Sales" />
+            <CountDownDateDay/>
+          </Flex>
 
           <div className="mt-[40px] mb-[60px] ">
             <Slider {...settings}>

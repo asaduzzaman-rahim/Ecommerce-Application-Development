@@ -1,0 +1,44 @@
+import React, { useState } from "react";
+import { countDownDateAndTime } from "countdown-date-time";
+import Flex from "./Flex"
+
+const CountDownDateDay = () => {
+
+  const[count, setCount] = useState({})
+  
+  const conduct_date = "2026-03-25 01:54:00";
+  
+      setInterval(()=>{
+        const countDown = countDownDateAndTime(conduct_date);
+        setCount(countDown)
+      },1000)
+
+
+  return (
+    <>
+      <Flex className="gap-[20px] items-center">
+          <div>
+            <span className="text-sm font-poppins font-medium leading-[18px] mb-[8px]">Days</span>
+            <h3 className="text-[32px] font-bold font-inter text-end leading-[30px]">{count.days}</h3>
+          </div>
+          <span className="text-[30px] font-poppins font-bold">:</span>
+          <div>
+            <span className="text-sm font-poppins font-medium leading-[18px] mb-[8px]">Hours</span>
+            <h3 className="text-[32px] font-bold font-inter text-end leading-[30px]">{count.hours}</h3>
+          </div>
+          <span className="text-[30px] font-poppins font-bold">:</span>
+          <div>
+            <span className="text-sm font-poppins font-medium leading-[18px] mb-[8px]">Minute</span>
+            <h3 className="text-[32px] font-bold font-inter text-end leading-[30px]">{count.minutes}</h3>
+          </div>
+          <span className="text-[30px] font-poppins font-bold">:</span>
+          <div>
+            <span className="text-sm font-poppins font-medium leading-[18px] mb-[8px]">Secend</span>
+            <h3 className="text-[32px] font-bold font-inter text-end leading-[30px]">{count.seconds}</h3>
+          </div>
+      </Flex>
+    </>
+  );
+};
+
+export default CountDownDateDay

@@ -1,18 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Container from "../Component/Container";
 import Grid from "../Component/Grid";
 
 import { BiSolidCategory } from "react-icons/bi";
+import Flex from "../Component/Flex";
+import ProductListCart from "../Component/ProductListCart";
 
 
 const Shop = () => {
 
   const [show, setShow] = useState(false)
+  const [allProducts, setAllProducts]=useState([])
 
   const handleClick = ()=>{
     setShow(!show)
   }
 
+    useEffect(()=>{
+      fetch('https://dummyjson.com/products')
+        .then(res => res.json())
+        .then((data)=> setAllProducts(data.products));
+    },[])
 
   return (
     <>
@@ -47,7 +55,21 @@ const Shop = () => {
 
           {/* ** ------------- Product list Items----------------- */}
           <div className="lg:w-[70%] w-full">
+            <Flex className="items-center gap-[30px] flex-wrap justify-center">
+              {
+                allProducts.map((items)=>{
 
+                  <ProductListCart
+                    ProductImage={items.thumbnail}
+                    Discount=""
+                    Heading=""
+                    DiscountPrice=""
+                    MainPrice=""
+                    total=""
+                  />
+                })
+              }
+            </Flex>
           </div>
 
         </Grid>

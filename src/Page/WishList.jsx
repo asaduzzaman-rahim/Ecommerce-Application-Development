@@ -48,6 +48,8 @@ const WishList = () => {
                 MainPrice="$140"
               />
           </Flex>
+
+          {/* Related Product List Section Start */}
           <div className='mt-[80px]'>
             <Flex className=' items-center justify-between pb-[60px]'>
               <SecHeading tittle="Just For You"/>  
@@ -55,6 +57,8 @@ const WishList = () => {
             </Flex>
             <RelatedProductList/>
           </div>
+          {/* Related Product List Section End */}
+          
         </div>
       </Container>
     </>

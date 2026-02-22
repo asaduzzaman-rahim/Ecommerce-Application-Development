@@ -21,7 +21,7 @@ const OurExploreProducts = () => {
             <Container>               
                 <SecHeading  tittle="Our Products" heading="Explore Our Products"/>
                <div className='my-[40px]'>
-                    <Flex className="flex flex-wrap gap-[30px] ">
+                    <Flex className="flex justify-center flex-wrap gap-[30px] ">
                         <ProductListCart 
                             ProductImage={productimg}
                             Discount="-40%"

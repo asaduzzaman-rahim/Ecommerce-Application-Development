@@ -1,42 +1,40 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Container from "../Component/Container";
 import Grid from "../Component/Grid";
 
 import { BiSolidCategory } from "react-icons/bi";
 import Flex from "../Component/Flex";
 import ProductListCart from "../Component/ProductListCart";
+import ShopProducts from "../Component/ShopProducts";
 
 
 const Shop = () => {
 
   const [show, setShow] = useState(false)
-  const [allProducts, setAllProducts]=useState([])
 
   const handleClick = ()=>{
     setShow(!show)
   }
 
-    useEffect(()=>{
-      fetch('https://dummyjson.com/products')
-        .then(res => res.json())
-        .then((data)=> setAllProducts(data.products));
-    },[])
 
   return (
     <>
     <div className="py-[30px] md:py-[50px] lg:py-[80px]">
       <Container>
-        <Grid className="grid-cols-1 lg:grid-cols-2 !items-start">
+        {/* <Grid className="grid-cols-1 lg:grid-cols-2 !items-start"> */}
+        <Flex className="!items-start gap-[40px]">
 
           {/* -----------------Category Section ------------------- */}
 
-          <div className="lg:w-[30%] w-full">
+          <div className="lg:w-[180px] w-full">
             <span>Home / Shop</span>
             <div className=" py-[25px] md:py-[35px] lg:py-[50px]">
-              <div className="flex justify-between items-center ">
-                <h3 className="text-[20px] font-bold text-[#262626]">Shop by Category</h3>
+              <Flex className="justify-between items-center ">
+                <Flex className="justify-between items-center">
+                  <h3 className="text-[20px] font-bold text-[#262626]">Shop by Category</h3>
+                </Flex>
                 <button onClick={handleClick} className="text-[30px] font-bold text-[#262626] cursor-pointer md:hidden"><BiSolidCategory /></button>
-              </div>
+              </Flex>
               <div className={` ${show ? "block" : "hidden"} md:block`}>               
                   <ul className={` w-full  text-[16px] lg:py-5 py-2  text-xs lg:text-base lg:space-y-2 grid grid-cols-3 md:grid-cols-3 lg:grid-cols-1 gap-x-6 gap-y-1`}>
                     <li>Woman’s Fashion</li>
@@ -54,7 +52,16 @@ const Shop = () => {
           </div>
 
           {/* ** ------------- Product list Items----------------- */}
-          <div className="lg:w-[70%] w-full">
+          <ShopProducts/>
+          {/* <div className="lg:w-[] w-full">
+            <div className="flex items-center gap-2 justify-end">
+              <h4 className="text-[16px]">Show:</h4>
+              <select id="#" className="border-1 border-hide rounded-md  px-7 py-1">
+                <option value="6">6</option>
+                <option value="9">9</option>
+                <option value="12">12</option>
+              </select>
+            </div>
             <Flex className="items-center gap-[30px] flex-wrap justify-center">
               {
                 allProducts.map((items)=>{
@@ -70,9 +77,10 @@ const Shop = () => {
                 })
               }
             </Flex>
-          </div>
+          </div> */}
 
-        </Grid>
+        </Flex>
+        {/* </Grid> */}
       </Container>
     </div>
     </>

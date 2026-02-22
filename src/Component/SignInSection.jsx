@@ -13,8 +13,7 @@ const SignInSection = () => {
     }
   return (
     <>
-      <div className='mt-[60px] mb-[140px]  max-w-[1305px]'>
-        <div>
+      <div className='mt-[60px] mb-[140px]  max-w-[1305px] px-5 md:px-0'>
           <Flex className="gap-[129px] justify-center lg:!items-start lg:justify-between relative">
             <div className='hidden lg:block'>
                 <img src={SignUpIMG} alt="SignUp Img" />
@@ -40,7 +39,6 @@ const SignInSection = () => {
               </form>
             </div>
           </Flex>
-        </div>
       </div>
     </>
   )

@@ -17,7 +17,8 @@ const SliderHome = () => {
               <h3 className="text-[48px] text-white font-semibold !leading-[48px] py-[32px]">Enhance Your Music Experience</h3>
               <div className="my-[20px]">
                 <CountDownDateDay 
-                  SecendclassName="p-3 rounded-full !text-center !bg-white "
+                  className="!text-[22px] !mt-0 !leading-[25px]  "
+                  SecendclassName="w-15 h-15 !pt-3 rounded-full !text-center !leading-[0px] !bg-white "
                 />
               </div>
               <Button className="!bg-[#00ff66]">Buy Now</Button>

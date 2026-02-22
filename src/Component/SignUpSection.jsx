@@ -10,11 +10,10 @@ const SignUpSection = () => {
 
   return (
     <>
-      <Container className="lg:!w-full">
-        <div className='mt-[60px] mb-[140px] max-w-[1305px]'>
-          <Flex className="gap-[129px] justify-center lg:!justify-between relative">
+       <div className='mt-[60px] mb-[140px] max-w-[1305px] px-5 md:px-0'>
+          <Flex className="gap-[129px] justify-center xl:!justify-between relative">
             <div className=' hidden xl:block '>
-              <div  className="absolute top-[-55px] left-[-250px] z-10" >
+              <div  className="" >
                 <img src={SignUpIMG} alt="SignUp Img" />
               </div>
             </div>
@@ -35,7 +34,6 @@ const SignUpSection = () => {
             </div>
           </Flex>
       </div>
-      </Container>
     {/* --------------------------- */}
 
     </>

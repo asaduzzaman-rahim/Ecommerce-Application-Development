@@ -11,15 +11,15 @@ import Layout from "./Layout.jsx";
 import Home from "./Page/Home.jsx";
 import About from "./Page/About.jsx";
 import Contact from "./Page/Contact.jsx";
-import SignUp from "./Page/SignUp.jsx";
-import Shop from "./Page/Shop.jsx";
-import SignIn from "./Page/SignIn.jsx"
-import WishList from "./Page/WishList.jsx"
 import ErrorPage from "./Page/ErrorPage.jsx"
 import CartSection from "./Page/CartSection.jsx";
 import MyAccount from "./Page/MyAccount.jsx";
 import CheckOut from "./Page/CheckOut.jsx";
 import ProductDetailsPage from "./Page/ProductDetailsPage.jsx";
+import WishListPage from "./Page/WishListPage.jsx";
+import SignInPage from "./Page/SignInPage.jsx";
+import SignUpPage from "./Page/SignUpPage.jsx";
+import ShopPage from "./Page/Shop.jsx";
 
 // *! React Redux
 // import { Provider } from 'react-redux'
@@ -40,7 +40,7 @@ let router = createBrowserRouter([
       },
       {
         path: "shop",
-        Component: Shop,
+        Component: ShopPage,
       },
       {
         path: "about",
@@ -52,11 +52,11 @@ let router = createBrowserRouter([
       },
       {
         path: "signup",
-        Component: SignUp,
+        Component: SignUpPage,
       },
       {
         path: "signin",
-        Component: SignIn,
+        Component: SignInPage,
       },
       {
         path: "cart",
@@ -64,7 +64,7 @@ let router = createBrowserRouter([
       },
       {
         path: "wishlist",
-        Component: WishList,
+        Component: WishListPage,
       },
       {
         path: "myaccount",

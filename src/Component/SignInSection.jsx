@@ -1,18 +1,16 @@
 import React, { useState } from 'react'
-import Flex from "../Component/Flex"
-import Button from "../Component/Button"
-import Container from "../Component/Container"
+import Flex from "./Flex"
+import Button from "./Button"
+import Container from "./Container"
 import SignUpIMG from "../assets/SignUpImg.png"
 
-const SignUp = () => {
-
-  const [forgetPassword, setForgetPassword] = useState(false)
-
-  const handleClick = (e)=>{
-      e.preventDefault()
-      setForgetPassword(!forgetPassword)
-  }
-
+const SignInSection = () => {
+    const [forgetPassword, setForgetPassword] = useState(false)
+  
+    const handleClick = (e)=>{
+        e.preventDefault()
+        setForgetPassword(!forgetPassword)
+    }
   return (
     <>
       <div className='mt-[60px] mb-[140px]  max-w-[1305px]'>
@@ -48,4 +46,4 @@ const SignUp = () => {
   )
 }
 
-export default SignUp
+export default SignInSection

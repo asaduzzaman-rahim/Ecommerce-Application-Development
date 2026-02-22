@@ -4,6 +4,7 @@ import Grid from "./Grid";
 import Button from "./Button";
 
 import SliderHomeImg from "../assets/SliderHomeImg.png";
+import CountDownDateDay from "./CountDownDateDay";
 
 const SliderHome = () => {
   return (
@@ -14,6 +15,11 @@ const SliderHome = () => {
             <div className="py-[69px] pl-[56px] w-[445px] ">
               <span className="text-[#00ff66] text-[16px] font-semibold leading-[20px] ">Categories</span>
               <h3 className="text-[48px] text-white font-semibold !leading-[48px] py-[32px]">Enhance Your Music Experience</h3>
+              <div className="my-[20px]">
+                <CountDownDateDay 
+                  SecendclassName="p-3 rounded-full !text-center !bg-white "
+                />
+              </div>
               <Button className="!bg-[#00ff66]">Buy Now</Button>
             </div>
             <div className="shadow-[15px_10px_15px_15px_rgba(217,217,217,0.5)] text-center mx-auto rounded-full  mr-[44px]">

@@ -1,11 +1,13 @@
-import React from 'react'
-import Flex from "../Component/Flex"
-import Button from "../Component/Button"
-import Container from "../Component/Container"
+import Flex from "./Flex"
+import Button from "./Button"
+import Container from "./Container"
 import SignUpIMG from "../assets/SignUpImg.png"
 import { Link } from "react-router-dom";
 
-const SignUp = () => {
+const SignUpSection = () => {
+
+
+
   return (
     <>
       <Container className="lg:!w-full">
@@ -34,8 +36,10 @@ const SignUp = () => {
           </Flex>
       </div>
       </Container>
+    {/* --------------------------- */}
+
     </>
   )
 }
 
-export default SignUp
+export default SignUpSection

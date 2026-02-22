@@ -5,6 +5,9 @@ import Flex from "./Flex";
 import ProductListCart from "./ProductListCart";
 import Button from "./Button";
 
+import {CiHeart} from "react-icons/ci"
+import {IoEyeOutline} from "react-icons/io5"
+
 import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -88,6 +91,8 @@ function SamplePrevArrow(props) {
             <Slider {...settings}>
                 <ProductListCart 
                   ProductImage={productimg}
+                  Icon1={<CiHeart/>}
+                  Icon2={<IoEyeOutline/>}
                   Discount="-40%"
                   Heading="HAVIT HV-G92 Gamepad"
                   DiscountPrice="$120"
@@ -95,6 +100,8 @@ function SamplePrevArrow(props) {
                 />
                 <ProductListCart 
                   ProductImage={productimg}
+                  Icon1={<CiHeart/>}
+                  Icon2={<IoEyeOutline/>}
                   Discount="-40%"
                   Heading="HAVIT HV-G92 Gamepad"
                   DiscountPrice="$120"
@@ -102,6 +109,8 @@ function SamplePrevArrow(props) {
                 />
                 <ProductListCart 
                   ProductImage={productimg}
+                  Icon1={<CiHeart/>}
+                  Icon2={<IoEyeOutline/>}
                   Discount="-40%"
                   Heading="HAVIT HV-G92 Gamepad"
                   DiscountPrice="$120"
@@ -109,6 +118,8 @@ function SamplePrevArrow(props) {
                 />
                 <ProductListCart 
                   ProductImage={productimg}
+                  Icon1={<CiHeart/>}
+                  Icon2={<IoEyeOutline/>}
                   Discount="-40%"
                   Heading="HAVIT HV-G92 Gamepad"
                   DiscountPrice="$120"
@@ -116,6 +127,8 @@ function SamplePrevArrow(props) {
                 />
                 <ProductListCart 
                   ProductImage={productimg}
+                  Icon1={<CiHeart/>}
+                  Icon2={<IoEyeOutline/>}
                   Discount="-40%"
                   Heading="HAVIT HV-G92 Gamepad"
                   DiscountPrice="$120"
@@ -123,6 +136,8 @@ function SamplePrevArrow(props) {
                 />
                 <ProductListCart 
                   ProductImage={productimg}
+                  Icon1={<CiHeart/>}
+                  Icon2={<IoEyeOutline/>}
                   Discount="-40%"
                   Heading="HAVIT HV-G92 Gamepad"
                   DiscountPrice="$120"
@@ -130,6 +145,8 @@ function SamplePrevArrow(props) {
                 />
                 <ProductListCart 
                   ProductImage={productimg}
+                  Icon1={<CiHeart/>}
+                  Icon2={<IoEyeOutline/>}
                   Discount="-40%"
                   Heading="HAVIT HV-G92 Gamepad"
                   DiscountPrice="$120"
@@ -137,11 +154,32 @@ function SamplePrevArrow(props) {
                 />
                 <ProductListCart 
                   ProductImage={productimg}
+                  Icon1={<CiHeart/>}
+                  Icon2={<IoEyeOutline/>}
                   Discount="-40%"
                   Heading="HAVIT HV-G92 Gamepad"
                   DiscountPrice="$120"
                   MainPrice="$160"
                 />
+                <ProductListCart 
+                  ProductImage={productimg}
+                  Icon1={<CiHeart/>}
+                  Icon2={<IoEyeOutline/>}
+                  Discount="-40%"
+                  Heading="HAVIT HV-G92 Gamepad"
+                  DiscountPrice="$120"
+                  MainPrice="$160"
+                />
+                <ProductListCart 
+                  ProductImage={productimg}
+                  Icon1={<CiHeart/>}
+                  Icon2={<IoEyeOutline/>}
+                  Discount="-40%"
+                  Heading="HAVIT HV-G92 Gamepad"
+                  DiscountPrice="$120"
+                  MainPrice="$160"
+                />
+                
             </Slider>
           </div>
 

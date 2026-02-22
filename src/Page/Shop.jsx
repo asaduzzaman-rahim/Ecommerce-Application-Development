@@ -26,7 +26,7 @@ const Shop = () => {
 
           {/* -----------------Category Section ------------------- */}
 
-          <div className="lg:w-[180px] w-full">
+          <div className="lg:w-[220px] w-full">
             <span>Home / Shop</span>
             <div className=" py-[25px] md:py-[35px] lg:py-[50px]">
               <Flex className="justify-between items-center ">

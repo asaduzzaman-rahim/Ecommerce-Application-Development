@@ -52,7 +52,7 @@ const Shop = () => {
           </div>
 
           {/* ** ------------- Product list Items----------------- */}
-          <div className="bg-red-500 h-screen w-[100%] lg:!w-[80%]">
+          <div className="w-[100%] lg:!w-75%]">
             <ShopProducts/>
           </div>
           {/* <div className="lg:w-[] w-full">

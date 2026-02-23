@@ -15,11 +15,16 @@ This project is inspired by a professional online shopping platform and focuses 
 
 The project is developed using **component-based architecture** to ensure reusability, readability, and maintainability.
 
-This project is ideal for:
-- Practicing real-world React component structure
-- Learning Tailwind CSS utility-first styling
-- Understanding layout systems (Flexbox & Grid)
-- Building scalable UI for future backend integration
+This project focuses on:
+- Clean UI Design
+- Reusable Component Architecture
+- Responsive Layout System
+- Real-world E-commerce Structure
+- Scalable Codebase for Backend Integration
+
+> 🚧 Project Status: Development Running  
+> This project is currently under active development. New features and improvements are being added continuously.
+
 
 ---
 
@@ -32,32 +37,22 @@ This project is ideal for:
 
 ## ✨ Features
 
-✔ Fully responsive layout (Mobile, Tablet & Desktop)  
-✔ Reusable React components (Container, Flex, Button, Card, etc.)  
+✔ Fully responsive layout (Mobile / Tablet / Desktop)  
 ✔ Modern Navbar with mobile toggle menu  
-✔ Banner slider using **react-slick**  
-✔ Category sidebar layout  
-✔ Service & Icon cards with hover effects  
+✔ Banner slider using react-slick  
+✔ Flash Sales section with Countdown Timer  
+✔ Category slider  
+✔ Reusable Product Card UI  
+✔ Wishlist UI  
+✔ Cart UI with quantity control  
+✔ Checkout billing form  
+✔ Authentication UI (Sign Up / Login design)  
+✔ API Product Fetching (DummyJSON)  
 ✔ Clean footer section  
-✔ Tailwind CSS custom spacing & styling  
-✔ Ready for backend / API / Firebase integration  
+✔ Reusable layout system (Container, Flex, Grid)  
+✔ Tailwind utility-based styling  
+✔ Hover & group-hover animations  
 
----
-
-## 🧩 Component Structure
-
-Some of the main reusable components:
-
-- **Header** – Top announcement bar  
-- **Navbar** – Responsive navigation with icons  
-- **Banner (Slider)** – Auto-playing carousel  
-- **IconCart** – Statistics / feature cards  
-- **OurStory** – About section layout  
-- **ServiceArea & ServiceCard** – Service highlights  
-- **Footer** – Website footer  
-- **Container** – Central layout wrapper  
-- **Flex** – Custom flex utility component  
-- **Button** – Reusable button UI  
 
 ---
 
@@ -82,16 +77,55 @@ Some of the main reusable components:
 
 ---
 
-## 📂 Project Status
 
 🚀 **Development Running**
 
-Planned & upcoming features:
-- Product listing page
+# 🔄 Development Progress
+
+## ✅ Completed
+
+- Core layout system
+- Homepage UI
+- Sliders integration
+- Product card system
+- Cart UI
+- Checkout UI
+- Wishlist UI
+- About page
+- Contact page
+- API product fetching
+
+## 🚧 In Progress
+
+- Cart state management
+- Wishlist logic implementation
 - Product details page
-- Authentication (Sign Up / Login)
-- Cart functionality
-- Wishlist
-- Firebase / Backend integration
-- Checkout flow
-- Admin dashboard (future)
+- Authentication logic
+- Form validation
+
+---
+
+# 🚀 Upcoming Features
+
+- Context API / Redux integration
+- Firebase Authentication
+- Firebase Firestore Database
+- Product filtering system
+- Pagination
+- Search functionality
+- Order history
+- Admin dashboard
+- Payment gateway integration
+
+-----
+
+# 🎯 Learning Goals
+
+## This project helps practice:
+
+- Advanced React component structure
+- Reusable UI system design
+- Real-world e-commerce frontend architecture
+- API data fetching
+- Responsive layout mastery
+- Tailwind CSS professional usage

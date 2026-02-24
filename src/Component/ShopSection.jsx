@@ -2,15 +2,18 @@ import React, { useState } from "react";
 import Container from "../Component/Container";
 import Grid from "../Component/Grid";
 
+
 import { BiSolidCategory } from "react-icons/bi";
 import Flex from "../Component/Flex";
 import ProductListCart from "../Component/ProductListCart";
 import ShopProducts from "../Component/ShopProducts";
+import BreadCrumb from "./BreadCrumb";
 
 
 const Shop = () => {
 
   const [show, setShow] = useState(false)
+  
 
   const handleClick = ()=>{
     setShow(!show)
@@ -27,7 +30,7 @@ const Shop = () => {
           {/* -----------------Category Section ------------------- */}
 
           <div className="lg:w-[220px]  w-full">
-            <span>Home / Shop</span>
+            <BreadCrumb/>
             <div className=" py-[15px] md:py-[25px] lg:py-[50px]">
               <Flex className="justify-between items-center ">
                 <Flex className="justify-between items-center">

@@ -1,17 +1,32 @@
 import React, { useState } from 'react';
 import ReactPaginate from 'react-paginate';
+import ProductListCart from "../Component/ProductListCart";
+
 
 // Example items, to simulate fetching from another resources.
 const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
-function Items({ currentItems }) {
+function Items({ currentItems, allProducts }) {
   return (
     <>
       {currentItems &&
         currentItems.map((item) => (
-          <div>
-            <h3>Item #{item}</h3>
-          </div>
+            
+         allProducts && 
+            allProducts.map((items, key) => {
+              return(
+                <ProductListCart key={key}
+                ProductImage={items.thumbnail}
+                Discount={items.discountPercentage}
+                Heading={items.title}
+                DiscountPrice=""
+                MainPrice={items.price}
+                total=""
+                Icon1={<CiHeart/>}
+                Icon2={<IoEyeOutline/>}
+                />
+              )
+        })
         ))}
     </>
   );

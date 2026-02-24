@@ -7,6 +7,7 @@ import RelatedProductList from '../Component/RelatedProductList'
 import SecHeading from "../Component/SecHeading"
 
 import productimg from "../assets/ProductImage.jpg"
+import BreadCrumb from './BreadCrumb'
 
 
 const WishList = () => {
@@ -14,6 +15,7 @@ const WishList = () => {
     <>
       <Container>
         <div className='py-[10px] md:py-[40px] lg:py-[80px]'>
+            <BreadCrumb/>
           <Flex className="justify-between items-center">
             <span>Wishlist (4)</span>
             <Button className="!bg-white !text-black border-1 border-hide">Move All To Bag</Button>

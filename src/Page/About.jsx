@@ -3,6 +3,7 @@ import OurStory from '../Component/OurStory'
 import AboutCart from '../Component/AboutCart'
 import ServiceAria from '../Component/ServiceAria'
 import PersonSection from '../Component/PersonSection'
+import BreadCrumb from '../Component/BreadCrumb'
 
 const About = () => {
   return (

@@ -1,6 +1,7 @@
 import React from 'react'
 import Flex from "./Flex"
 import Container from "./Container"
+import BreadCrumb from './BreadCrumb'
 
 import StoryImg from "../assets/OurStoryImg.png"
 
@@ -9,6 +10,7 @@ const OurStory = () => {
     <>
     <div className='py-[50px] lg:py-[170px] '>
         <Container> 
+            <BreadCrumb/>
             <Flex className=" flex-wrap  justify-between md:justify-center lg:justify-between  gap-[75px] relative">
                 <div>
                     <h2 className='mb-[40px]'>Our Story</h2>

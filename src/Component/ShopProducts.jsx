@@ -6,6 +6,7 @@ import SkeletonDemo from "../Component/SkeletonDemo"
 
 import {CiHeart} from "react-icons/ci"
 import {IoEyeOutline} from "react-icons/io5"
+import PaginatedItems from "./PaginatedItems";
 
 
 const ShopProducts = () => {
@@ -43,33 +44,18 @@ return (
         { 
         loading ?
         
-          // Array.from(length, selectOption ).map((_, id)=>{
+          // Array.from({length: selectOption} ).map((_, id)=>{
           //   <SkeletonDemo key={id}/>  
           // })
-          // 
+          
           <div className="flex gap-[30px] justify-between">
             <SkeletonDemo />  
             <SkeletonDemo />  
             <SkeletonDemo />  
           </div>
           :
-        allProducts && 
-            allProducts.map((items, key) => {
-              return(
-                <ProductListCart key={key}
-                ProductImage={items.thumbnail}
-                Discount={items.discountPercentage}
-                Heading={items.title}
-                DiscountPrice=""
-                MainPrice={items.price}
-                total=""
-                Icon1={<CiHeart/>}
-                Icon2={<IoEyeOutline/>}
-                />
-              )
-        })
-        
-        }
+          <PaginatedItems allProducts={allProducts}/>
+      }
       </Flex>
     </div>
     </>

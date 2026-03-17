@@ -8,7 +8,7 @@ import Button from "./Button";
 import {CiHeart} from "react-icons/ci"
 import {IoEyeOutline} from "react-icons/io5"
 
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -18,6 +18,8 @@ import CountDownDateDay from "./CountDownDateDay";
 
 
 const FreshSales = () => {
+
+  const navigate = useNavigate()
 
   function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -186,7 +188,7 @@ function SamplePrevArrow(props) {
                
             
           <div className="text-center">
-            <NavLink to={"/shop"}><Button className="text-center">View All Products</Button></NavLink> 
+            <Button onClick={()=> navigate("/shop")} className="text-center">View All Products</Button>
           </div>
         </div>
       </Container>

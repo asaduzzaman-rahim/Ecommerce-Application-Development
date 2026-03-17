@@ -17,20 +17,15 @@ function Items({ currentItems }) {
     <>
       {currentItems &&
         currentItems.map((item) => (
-          allProducts.map((items)=>(
-             <ProductListCart key={items.id}
-                ProductImage={items.thumbnail}
-                Discount={items.discountPercentage}
-                Heading={items.title}
-                DiscountPrice=""
-                MainPrice={items.price}
-                total=""
-                Icon1={<CiHeart/>}
-                Icon2={<IoEyeOutline/>}
-                />
-          ))
-               
-              
+          <ProductListCart
+            key={item.id}
+            ProductImage={item.thumbnail}
+            Discount={item.discountPercentage}
+            Heading={item.title}
+            MainPrice={item.price}
+            Icon1={<CiHeart />}
+            Icon2={<IoEyeOutline />}
+          />
         ))}
     </>
   )};
@@ -39,15 +34,15 @@ function Items({ currentItems }) {
 
 
   const endOffset = itemOffset + itemsPerPage;
-  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+  // console.log(`Loading items from ${itemOffset} to ${endOffset}`);
   const currentItems = items.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(items.length / itemsPerPage);
 
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % items.length;
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`
-    );
+    // console.log(
+    //   `User requested page number ${event.selected}, which is offset ${newOffset}`
+    // );
     setItemOffset(newOffset);
 }
 

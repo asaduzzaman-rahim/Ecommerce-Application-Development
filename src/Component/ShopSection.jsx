@@ -43,7 +43,7 @@ const Shop = () => {
       .catch(err => console.log(err))
     },[dispatch])
     
-    console.log(allProducts);
+    // console.log(allProducts);
     
       const [show, setShow] = useState(false)
       const handleClick = ()=>{
@@ -56,7 +56,7 @@ const Shop = () => {
     <div className="py-[30px] md:py-[50px] lg:py-[80px]">
       <Container>
         {/* <Grid className="grid-cols-1 lg:grid-cols-2 !items-start"> */}
-        <Flex className="!items-start flex-wrap lg:flex-nowrap lg:justify-between gap-x-[40px]">
+        <Flex className="!items-start flex-wrap lg:flex-nowrap lg:!justify-end gap-x-[60px] w-full">
 
           {/* -----------------Category Section ------------------- */}
 
@@ -86,31 +86,33 @@ const Shop = () => {
           </div>
 
           {/* ** ------------- Product list Items----------------- */}
-          <div className="w-[100%] lg:!w-75%]">
+          <div className="w-[100%] lg:!w-80%]">
                 <div className="lg:w-[] w-full ">
-      <div className="flex items-center gap-2  mb-4 ml-[250px">
+      <div className="flex items-center gap-2 pb-4 lg:pb-8 ">
+        <div className="w-full flex gap-3 items-center justify-end">
         <h4 className="text-[16px]">Show:</h4>
-        <select   id="#" onChange={(e)=> setSelectOption(e.target.value) }
+          <select id="#" onChange={(e)=> setSelectOption(e.target.value) }
                   className="border-1 border-hide rounded-md  px-7 py-1">
-          <option value="6">6</option>
-          <option value="9">9</option>
-          <option value="12">12</option>
-        </select>
+            <option value="6">6</option>
+            <option value="9">9</option>
+            <option value="12">12</option>
+          </select>
+        </div>
       </div>
-      <Flex className="items-center gap-[20px] md:gap-[15px] lg:gap-[30px] flex-wrap justify-center ">
+      <Flex className="items-center gap-[20px] md:gap-[15px] lg:gap-[40px] flex-wrap justify-center lg:justify-start">
        
         { 
         loading ?
         
-        //  { Array.from({lenght: selectOption} ).map((_, id)=>{
-        //     <SkeletonDemo key={id}/>  
-        //   })}
+          Array.from({ length: Number(selectOption) }).map((_, id) => {
+              return <SkeletonDemo key={id} />;
+            })
           
-          <div className="flex gap-[30px] justify-between">
-            <SkeletonDemo />  
-            <SkeletonDemo />  
-            <SkeletonDemo />  
-          </div>
+          // <div className="flex gap-[30px] justify-between">
+          //   <SkeletonDemo />  
+          //   <SkeletonDemo />  
+          //   <SkeletonDemo />  
+          // </div>
           :
           <PaginatedItems itemsPerPage={selectOption} allProducts={allProducts}/>
       }

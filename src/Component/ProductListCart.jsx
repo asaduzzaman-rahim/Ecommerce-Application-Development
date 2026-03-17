@@ -9,7 +9,7 @@ import {IoEyeOutline} from "react-icons/io5"
 const ProductListCart = ({className,ProductImage,Discount,Heading,DiscountPrice,MainPrice,total,BtnClass,Icon1,Icon2}) => {
   return (
     <>
-        <div className='w-[185px] md:w-[270px] group cursor-pointer shadow-hide shadow-md p-3'>
+        <div className='w-[185px] md:w-[270px] group cursor-pointer  p-3'>
             <div className='relative overflow-hidden '>
                 <img src={ProductImage} />
                 <h5 className={`${className} absolute top-[8px] md:top-[12px] left-[1px] md:left-[12px] py-[4px] px-[12px] bg-primary text-white inline-block text-[12px] rounded-[4px] font-poppins leading-[18px]`}>{Discount}</h5>

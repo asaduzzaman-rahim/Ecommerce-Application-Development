@@ -4,7 +4,7 @@ import SecHeading from "./SecHeading";
 import ProductListCart from "./ProductListCart";
 import Button from "./Button";
 import Flex from "./Flex";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { CiHeart } from "react-icons/ci";
 import { IoEyeOutline } from "react-icons/io5";
@@ -15,6 +15,9 @@ import ProductImg02 from "../assets/BestProduct (2).png";
 import ProductImg03 from "../assets/BestProduct (3).png";
 
 const OurExploreProducts = () => {
+
+  const navigate = useNavigate()
+
   return (
     <>
       <section className="pt-[70px] pb-[140px]">
@@ -89,9 +92,9 @@ const OurExploreProducts = () => {
             </Flex>
           </div>
           <div className="text-center">
-            <Link to={"/shop"}>
-              <Button>View All Products</Button>
-            </Link>
+            {/* <NavLink to={"/shop"}> */}
+              <Button onClick={()=> navigate("/shop")}>View All Products</Button>
+            {/* </NavLink> */}
           </div>
         </Container>
       </section>

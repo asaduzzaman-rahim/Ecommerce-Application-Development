@@ -8,7 +8,7 @@ import Button from "./Button";
 import {CiHeart} from "react-icons/ci"
 import {IoEyeOutline} from "react-icons/io5"
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -186,7 +186,7 @@ function SamplePrevArrow(props) {
                
             
           <div className="text-center">
-            <Link to={"/shop"}><Button className="text-center">View All Products</Button></Link> 
+            <NavLink to={"/shop"}><Button className="text-center">View All Products</Button></NavLink> 
           </div>
         </div>
       </Container>

@@ -1,21 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import ReactDOM from 'react-dom';
 import ReactPaginate from 'react-paginate';
-import ProductListCart from "../Component/ProductListCart";
+
+import ProductListCart from './ProductListCart';
+
+import { CiHeart } from "react-icons/ci";
+import { IoEyeOutline } from "react-icons/io5";
 
 
-// Example items, to simulate fetching from another resources.
-const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+const PaginatedItems = ({ itemsPerPage , allProducts }) => {
 
-function Items({ currentItems, allProducts }) {
+  const items = allProducts
+
+function Items({ currentItems }) {
   return (
     <>
       {currentItems &&
         currentItems.map((item) => (
-            
-         allProducts && 
-            allProducts.map((items, key) => {
-              return(
-                <ProductListCart key={key}
+          allProducts.map((items)=>(
+             <ProductListCart key={items.id}
                 ProductImage={items.thumbnail}
                 Discount={items.discountPercentage}
                 Heading={items.title}
@@ -25,32 +28,28 @@ function Items({ currentItems, allProducts }) {
                 Icon1={<CiHeart/>}
                 Icon2={<IoEyeOutline/>}
                 />
-              )
-        })
+          ))
+               
+              
         ))}
     </>
-  );
-}
+  )};
 
-function PaginatedItems({ itemsPerPage }) {
-
-    
-  const [itemOffset, setItemOffset] = useState(0);
+   const [itemOffset, setItemOffset] = useState(0);
 
 
   const endOffset = itemOffset + itemsPerPage;
-//   console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
   const currentItems = items.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(items.length / itemsPerPage);
 
-  // Invoke when user click to request another page.
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % items.length;
-    // console.log(
-    //   `User requested page number ${event.selected}, which is offset ${newOffset}`
-    // );
+    console.log(
+      `User requested page number ${event.selected}, which is offset ${newOffset}`
+    );
     setItemOffset(newOffset);
-  };
+}
 
   return (
     <>
@@ -65,7 +64,7 @@ function PaginatedItems({ itemsPerPage }) {
         renderOnZeroPageCount={null}
       />
     </>
-  );
+  )
 }
 
 export default PaginatedItems

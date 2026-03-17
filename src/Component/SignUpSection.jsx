@@ -2,9 +2,16 @@ import Flex from "./Flex"
 import Button from "./Button"
 import Container from "./Container"
 import SignUpIMG from "../assets/SignUpImg.png"
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const SignUpSection = () => {
+
+  const navigate = useNavigate()
+
+  const handleClick = (e) =>{
+      e.preventDefault() 
+      navigate("/SignIn")
+  }
 
 
 
@@ -29,7 +36,7 @@ const SignUpSection = () => {
                   <Button className=" !inline">Create Account</Button> 
                   <Button className="!bg-white !inline !text-black border-2 border-gray-500">Sign up with Google</Button>
                 </div>
-                <p className='text-[16px] text-center'>Already have account? <Link to={"/SignIn"} className='!border-b-2  border-gray-500' >Log in</Link> </p>
+                <p className='text-[16px] text-center'>Already have account? <button onClick={handleClick} className='!border-b-2  border-gray-500' >Log in</button> </p>
               </form>
             </div>
           </Flex>

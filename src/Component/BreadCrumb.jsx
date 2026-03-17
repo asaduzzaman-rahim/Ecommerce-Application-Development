@@ -10,7 +10,7 @@ const BreadCrumb = () => {
   return (
     <>
       <Container>
-        <div className="flex gap-4">
+        <div className="flex gap-4 capitalize">
           <h5>Home</h5>
           <h5>/</h5>
           <h5>{location}</h5>

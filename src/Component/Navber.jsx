@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Container from './Container'
 import Flex from './Flex'
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -32,25 +32,25 @@ const Navber = () => {
                 <nav className=' pt-[40px] pb-[16px]'>
                     <Flex className="justify-between items-center relative ">
                         <div className='cursor-pointer pl-3'>
-                            <Link to={"/"}><img src={Logo} alt="logo" /> </Link>
+                            <NavLink to={"/"}><img src={Logo} alt="logo" /> </NavLink>
                         </div>
                         <div className={` lg:flex  z-10 lg:flex-row justify-between flex-col gap-4 p-4 lg:p-0 lg:w-[75%] lg:static absolute top-12 left-0 lg:bg-white lg:text-black  bg-blue-500 text-white w-full   
-                        ${!navber ? "hidden" : "block"}`}>
-                           <ul className=' lg:flex flex-wrap gap-[48px] pb-5'>
-                                <li> <Link to={"/"}>Home </Link> </li>
-                                <li> <Link to={"/contact"}>Contact</Link> </li>
-                                <li> <Link to={"/about"}> About </Link> </li>
-                                <li> <Link to={"/signup"}>Sign Up </Link> </li>
+                        ${!navber ? "hidden" : "block"} `}>
+                            <ul className=' lg:flex flex-wrap gap-[48px] pb-5'>
+                                <li> <NavLink to={"/"}>Home </NavLink> </li>
+                                <li> <NavLink to={"/contact"}>Contact</NavLink> </li>
+                                <li> <NavLink to={"/about"}> About </NavLink> </li>
+                                <li> <NavLink to={"/signup"}>Sign Up </NavLink> </li>
                             </ul>
                          
-                         <div className='flex items-center gap-[16px] pr-3'>
+                        <div className='flex items-center gap-[16px] pr-3'>
                                 <div className='flex gap-3 !text-black bg-[#F5F5F5]'>
                                     <input type="search" placeholder='What are you looking for?'
                                     className='py-[7px] pl-[15px] pr-[10px]'/>
                                     <RiSearchLine className='h-[32px] w-[32px]   cursor-pointer' />
                                 </div>
-                                <Link to={"/wishlist"}> <IoIosHeartEmpty className='h-[32px] w-[32px] cursor-pointer' /></Link>
-                                <Link to={"/cart"}><RiShoppingCart2Line className='h-[32px] w-[32px] cursor-pointer' /></Link> 
+                                <NavLink to={"/wishlist"}> <IoIosHeartEmpty className='h-[32px] w-[32px] cursor-pointer' /></NavLink>
+                                <NavLink to={"/cart"}><RiShoppingCart2Line className='h-[32px] w-[32px] cursor-pointer' /></NavLink> 
                             </div>
                         </div>
                         

@@ -1,23 +1,54 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+
 import Container from "../Component/Container";
 import Grid from "../Component/Grid";
 
 
-import { BiSolidCategory } from "react-icons/bi";
 import Flex from "../Component/Flex";
+import SkeletonDemo from "../Component/SkeletonDemo"
+
+import {CiHeart} from "react-icons/ci"
+import {IoEyeOutline} from "react-icons/io5"
+import PaginatedItems from "./PaginatedItems";
+
+
+import { BiSolidCategory } from "react-icons/bi";
 import ProductListCart from "../Component/ProductListCart";
 import ShopProducts from "../Component/ShopProducts";
 import BreadCrumb from "./BreadCrumb";
+import { useDispatch } from "react-redux";
+import { ProductReducer } from "../Products/ProductSlice"; 
 
 
 const Shop = () => {
-
-  const [show, setShow] = useState(false)
   
+  const [allProducts, setAllProducts] = useState([]);
+  const [selectOption, setSelectOption] = useState(6)
+  const [loading, setLoading] = useState(true)
 
-  const handleClick = ()=>{
-    setShow(!show)
-  }
+  const dispatch = useDispatch()
+  
+  // console.log(dispatch);
+  // console.log(allProducts);
+  
+  
+    useEffect(()=>{
+      fetch('https://dummyjson.com/products/')
+      .then(res => res.json())
+      .then((data)=> {
+        setAllProducts(data.products)
+        dispatch(ProductReducer(data.products))
+        setLoading(false)
+      })
+      .catch(err => console.log(err))
+    },[dispatch])
+    
+    console.log(allProducts);
+    
+      const [show, setShow] = useState(false)
+      const handleClick = ()=>{
+        setShow(!show)
+      }
 
 
   return (
@@ -25,7 +56,7 @@ const Shop = () => {
     <div className="py-[30px] md:py-[50px] lg:py-[80px]">
       <Container>
         {/* <Grid className="grid-cols-1 lg:grid-cols-2 !items-start"> */}
-        <Flex className="!items-start flex-wrap lg:flex-nowrap gap-x-[40px]">
+        <Flex className="!items-start flex-wrap lg:flex-nowrap lg:justify-between gap-x-[40px]">
 
           {/* -----------------Category Section ------------------- */}
 
@@ -56,10 +87,37 @@ const Shop = () => {
 
           {/* ** ------------- Product list Items----------------- */}
           <div className="w-[100%] lg:!w-75%]">
-            <ShopProducts/>
-          </div>
+                <div className="lg:w-[] w-full ">
+      <div className="flex items-center gap-2  mb-4 ml-[250px">
+        <h4 className="text-[16px]">Show:</h4>
+        <select   id="#" onChange={(e)=> setSelectOption(e.target.value) }
+                  className="border-1 border-hide rounded-md  px-7 py-1">
+          <option value="6">6</option>
+          <option value="9">9</option>
+          <option value="12">12</option>
+        </select>
+      </div>
+      <Flex className="items-center gap-[20px] md:gap-[15px] lg:gap-[30px] flex-wrap justify-center ">
+       
+        { 
+        loading ?
+        
+        //  { Array.from({lenght: selectOption} ).map((_, id)=>{
+        //     <SkeletonDemo key={id}/>  
+        //   })}
           
-
+          <div className="flex gap-[30px] justify-between">
+            <SkeletonDemo />  
+            <SkeletonDemo />  
+            <SkeletonDemo />  
+          </div>
+          :
+          <PaginatedItems itemsPerPage={selectOption} allProducts={allProducts}/>
+      }
+      </Flex>
+    </div>
+          </div>
+        
         </Flex>
         {/* </Grid> */}
       </Container>

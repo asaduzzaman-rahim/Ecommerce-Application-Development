@@ -12,11 +12,7 @@ import { Rate } from "antd";
 import {FaStar} from "react-icons/fa"
 import { IoIosHeartEmpty } from "react-icons/io";
 
-import ProductImg01 from "../assets/Product Details Img (1).png";
-import ProductImg02 from "../assets/Product Details Img (2).png";
-import ProductImg03 from "../assets/Product Details Img (3).png";
-import ProductImg04 from "../assets/Product Details Img (4).png";
-import ProductImg05 from "../assets/Product Details Img (5).png";
+
 import Delivary from "../assets/icon-delivery.png"
 import Return from "../assets/Icon-return.png"
 
